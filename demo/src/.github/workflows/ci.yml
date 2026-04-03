@@ -23,6 +23,7 @@ jobs:
 
       - name: Build, verify, and run all tests
         run: mvn verify
+        working-directory: demo
 
       - name: Upload Surefire test reports
         if: always()
