@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/products/1"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Keyboard Pro",
+      "price": 59.99,
+      "stockQty": 8,
+      "category": "Accessories"
+    }
+order: 4000

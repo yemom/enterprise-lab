@@ -1,19 +1,20 @@
 [![CI](https://github.com/yemom/enterprise-lab/actions/workflows/main.yml/badge.svg)](https://github.com/yemom/enterprise-lab/actions/workflows/main.yml)
 
-# Product Service API (Lab 2)
+# Enterprise Lab - Product Service API (Lab 2)
 
-RESTful Product Catalogue API built with Spring Boot.
+Spring Boot RESTful Product Catalogue API implementation.
 
 ## Setup Instructions
 
-1. Clone the repository.
-2. Move into the project module:
+1. Clone this repository.
+2. Open a terminal in the project root.
+3. Move to the Maven module:
 
 ```bash
 cd demo
 ```
 
-3. Run the application:
+4. Start the API:
 
 ```bash
 mvn spring-boot:run
@@ -40,18 +41,14 @@ Base URL:
 
 ## Postman Collection
 
-- Required file path: postman/product-service-lab2.json
+- postman/product-service-lab2.json
 
 ## Tests
 
-Run all tests:
+From the demo folder:
 
 ```bash
 mvn test
 ```
 
-Current suite includes positive and negative scenarios for:
-
-- CRUD status codes
-- Validation errors (400 ProblemDetail)
-- Unknown resource errors (404 ProblemDetail)
+Current status: 11 tests run, 0 failures.

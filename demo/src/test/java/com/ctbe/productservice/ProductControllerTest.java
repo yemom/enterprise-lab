@@ -100,6 +100,18 @@ public class ProductControllerTest {
                                 .andExpect(status().isNotFound());
         }
 
+        // ── 404 Not Found — PUT unknown ID ───────────────────────
+        @Test
+        void update_returns404_whenNotFound() throws Exception {
+                String body = """
+                                {"name":"Ghost","price":19.99,"stockQty":1,"category":"Misc"}
+                                """;
+                mockMvc.perform(put("/api/v1/products/9999")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(body))
+                                .andExpect(status().isNotFound());
+        }
+
         // ── 400 Bad Request — Validation failure ─────────────────
         @Test
         void create_returns400_whenNameBlank() throws Exception {
